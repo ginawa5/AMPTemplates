@@ -11,6 +11,7 @@ Meta.MinAMPVersion=2.4.0.0
 Meta.DisplayName=Ultima Memento
 Meta.Description=Ultima Online private server powered by Memento
 Meta.OS=3
+Meta.Arch=x86_64
 Meta.AppConfigId=47d92e91-73a5-4477-bbfd-711431a3394e
 Meta.Author=Team7d0
 Meta.URL=https://github.com/Jascen/ultima-memento
@@ -18,14 +19,18 @@ Meta.DisplayImageSource=url:https://raw.githubusercontent.com/Jascen/ultima-meme
 Meta.ConfigManifest=ultimamemento-configmanifest.json
 Meta.MetaConfigManifest=ultimamemento-metaconfig.json
 Meta.ConfigRoot=ultimamementoGenericModule.kvp
+Meta.ConfigVersion=1.0
+Meta.ConfigReleaseState=Testing
 Meta.ContainerPolicy=SupportedOnLinux
 Meta.ExtraContainerPackages=["git","mono-complete"]
+Meta.EndpointURIFormat=
 
 ; ============================================================
 ; Application - Runtime configuration
 ; ============================================================
 App.DisplayName=Ultima Memento
 App.RootDir=./
+App.BaseDirectory=ultima-memento
 App.WorkingDir=ultima-memento
 App.ExecutableWin=World/World.exe
 App.ExecutableLinux=World/WorldLinux.exe
@@ -35,12 +40,23 @@ App.HasReadableConsole=true
 App.AdminMethod=STDIO
 App.ExitMethod=String
 App.ExitString=shutdown
+App.ExitTimeout=30
 App.RapidStartup=false
+App.ApplicationIPBinding=0.0.0.0
 App.ApplicationPort1=2593
 App.MaxUsers=100
 App.CommandLineArgs=
+App.CommandLineParameterFormat=-{0} "{1}"
 App.EnvironmentVariables={}
 App.AppSettings={}
+App.SupportsIPv6=false
+App.ApplicationReadyMode=Regex
+App.UseRandomAdminPassword=false
+App.SteamUpdateAnonymousLogin=true
+App.SteamForceLoginPrompt=false
+App.SupportsLiveSettingsChanges=false
+App.ForceIPBinding=false
+App.MonitorChildProcessName=
 
 ; ============================================================
 ; Update Sources - Git clone, generate override, compile
