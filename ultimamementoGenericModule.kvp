@@ -7,6 +7,7 @@
 ; ============================================================
 ; Meta - Module identity and display
 ; ============================================================
+Meta.MinAMPVersion=2.4.0.0
 Meta.DisplayName=Ultima Memento
 Meta.Description=Ultima Online private server powered by Memento
 Meta.OS=3
