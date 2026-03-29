@@ -1,0 +1,1377 @@
+[
+    {
+        "DisplayName": "Enable Console",
+        "Category": "System Options",
+        "Description": "Enables commands to be entered into the server console. WARNING: May cause crashes.",
+        "FieldName": "S_EnableConsole",
+        "InputType": "checkbox",
+        "EnumValues": { "False": "false", "True": "true" },
+        "DefaultValue": "false"
+    },
+    {
+        "DisplayName": "Console Logging",
+        "Category": "System Options",
+        "Description": "Enables output messages to the console from tasks and world building commands.",
+        "FieldName": "ConsoleLog",
+        "InputType": "checkbox",
+        "EnumValues": { "False": "false", "True": "true" },
+        "DefaultValue": "false"
+    },
+    {
+        "DisplayName": "Website Link",
+        "Category": "System Options",
+        "Description": "URL displayed on the Message of the Day button. Example: https://google.com",
+        "FieldName": "S_WebsiteLink",
+        "InputType": "text",
+        "DefaultValue": "https://discord.gg/mu7aAbRyJf"
+    },
+    {
+        "DisplayName": "Website Name",
+        "Category": "System Options",
+        "Description": "Text displayed next to the MOTD website button. If empty, displays 'Website'.",
+        "FieldName": "S_WebsiteName",
+        "InputType": "text",
+        "DefaultValue": "Memento Community Discord"
+    },
+    {
+        "DisplayName": "Server Save Interval",
+        "Category": "System Options",
+        "Description": "Minutes between auto-saves (decimal, 10.0 - 240.0).",
+        "FieldName": "S_ServerSaveMinutes",
+        "InputType": "text",
+        "Suffix": "min",
+        "DefaultValue": "30.0",
+        "Placeholder": "10.0 - 240.0"
+    },
+    {
+        "DisplayName": "Save on Character Logout",
+        "Category": "System Options",
+        "Description": "If enabled, saves the game when a character logs out. Helpful for single player.",
+        "FieldName": "S_SaveOnCharacterLogout",
+        "InputType": "checkbox",
+        "EnumValues": { "False": "false", "True": "true" },
+        "DefaultValue": "true"
+    },
+    {
+        "DisplayName": "Run Routines at Startup",
+        "Category": "System Options",
+        "Description": "Runs the self-cleaning and self-sustaining routines (hourly/3h/24h) when the server starts. Recommended for servers that are not 24x7.",
+        "FieldName": "S_RunRoutinesAtStartup",
+        "InputType": "checkbox",
+        "EnumValues": { "False": "false", "True": "true" },
+        "DefaultValue": "true"
+    },
+    {
+        "DisplayName": "Character Delete Days",
+        "Category": "System Options",
+        "Description": "Number of days a character must exist before a player can delete them (decimal).",
+        "FieldName": "S_DeleteDays",
+        "InputType": "text",
+        "Suffix": "days",
+        "DefaultValue": "3.0"
+    },
+    {
+        "DisplayName": "Auto Accounts",
+        "Category": "System Options",
+        "Description": "If enabled, players can create an account by just typing a name and password.",
+        "FieldName": "S_AutoAccounts",
+        "InputType": "checkbox",
+        "EnumValues": { "False": "false", "True": "true" },
+        "DefaultValue": "true"
+    },
+    {
+        "DisplayName": "Server Port",
+        "Category": "System Options",
+        "Description": "The port the server listens on.",
+        "FieldName": "S_Port",
+        "InputType": "number",
+        "DefaultValue": "2593",
+        "minValue": "1",
+        "maxValue": "65535"
+    },
+    {
+        "DisplayName": "Server Address",
+        "Category": "System Options",
+        "Description": "IP address for external connections. Leave blank for auto-detect.",
+        "FieldName": "S_Address",
+        "InputType": "text",
+        "DefaultValue": "",
+        "Placeholder": "Leave blank for auto-detect",
+        "SkipIfEmpty": true
+    },
+    {
+        "DisplayName": "Server Name",
+        "Category": "System Options",
+        "Description": "The name of your server/world.",
+        "FieldName": "S_ServerName",
+        "InputType": "text",
+        "DefaultValue": "Memento"
+    },
+    {
+        "DisplayName": "Auto Detect IP",
+        "Category": "System Options",
+        "Description": "If enabled, your public IP address will be auto-detected for external connections.",
+        "FieldName": "S_AutoDetect",
+        "InputType": "checkbox",
+        "EnumValues": { "False": "false", "True": "true" },
+        "DefaultValue": "true"
+    },
+
+    {
+        "DisplayName": "Persistent Blackjack",
+        "Category": "Game Options",
+        "Description": "Blackjack tables retain their settings/info across server restarts. Better for persistent worlds.",
+        "FieldName": "S_PersistentBlackjack",
+        "InputType": "checkbox",
+        "EnumValues": { "False": "false", "True": "true" },
+        "DefaultValue": "false"
+    },
+    {
+        "DisplayName": "Floor Trap Trigger Chance",
+        "Category": "Game Options",
+        "Description": "Percent chance a floor trap will trigger (minimum 5).",
+        "FieldName": "S_FloorTrapTrigger",
+        "InputType": "number",
+        "Suffix": "%",
+        "DefaultValue": "75",
+        "minValue": "5",
+        "maxValue": "100"
+    },
+    {
+        "DisplayName": "Announce Trap Saves",
+        "Category": "Game Options",
+        "Description": "If enabled, characters are notified when they make a saving throw to avoid a trap.",
+        "FieldName": "S_AnnounceTrapSaves",
+        "InputType": "checkbox",
+        "EnumValues": { "False": "false", "True": "true" },
+        "DefaultValue": "true"
+    },
+    {
+        "DisplayName": "Dungeon Sound Effects",
+        "Category": "Game Options",
+        "Description": "If enabled, dungeon environments will have random ambient sounds.",
+        "FieldName": "S_EnableDungeonSoundEffects",
+        "InputType": "checkbox",
+        "EnumValues": { "False": "false", "True": "true" },
+        "DefaultValue": "true"
+    },
+    {
+        "DisplayName": "Portal Exits",
+        "Category": "Game Options",
+        "Description": "If enabled, strange portals leading to deep dungeons will have an exit portal.",
+        "FieldName": "S_PortalExits",
+        "InputType": "checkbox",
+        "EnumValues": { "False": "false", "True": "true" },
+        "DefaultValue": "true"
+    },
+    {
+        "DisplayName": "Bribery Cost",
+        "Category": "Game Options",
+        "Description": "Gold cost to bribe the Assassin Guildmaster to remove a murder count. Set below 1000 to disable. Assassin guild members pay half.",
+        "FieldName": "S_Bribery",
+        "InputType": "number",
+        "DefaultValue": "50000",
+        "minValue": "0",
+        "maxValue": "1000000"
+    },
+    {
+        "DisplayName": "Allow Artifact Appearance Change",
+        "Category": "Game Options",
+        "Description": "If enabled, players can use Magic Scissors/Hammer to change classic artifact appearance (name is always retained).",
+        "FieldName": "S_ChangeArtyLook",
+        "InputType": "checkbox",
+        "EnumValues": { "False": "false", "True": "true" },
+        "DefaultValue": "true"
+    },
+    {
+        "DisplayName": "Corpse Decay Time",
+        "Category": "Game Options",
+        "Description": "Minutes before a player corpse turns to bones.",
+        "FieldName": "S_CorpseDecay",
+        "InputType": "number",
+        "Suffix": "min",
+        "DefaultValue": "10",
+        "minValue": "0",
+        "maxValue": "1440"
+    },
+    {
+        "DisplayName": "Bone Decay Time",
+        "Category": "Game Options",
+        "Description": "Minutes before player bones decay. Combined with Corpse Decay is total time to recover belongings.",
+        "FieldName": "S_BoneDecay",
+        "InputType": "number",
+        "Suffix": "min",
+        "DefaultValue": "1430",
+        "minValue": "0",
+        "maxValue": "14400"
+    },
+
+    {
+        "DisplayName": "Anti-Macro",
+        "Category": "Player Options",
+        "Description": "If enabled, characters cannot use macros to improve skills quickly.",
+        "FieldName": "S_NoMacroing",
+        "InputType": "checkbox",
+        "EnumValues": { "False": "false", "True": "true" },
+        "DefaultValue": "true"
+    },
+    {
+        "DisplayName": "Stat Gain Rate",
+        "Category": "Player Options",
+        "Description": "Rate of stat gain (decimal). 50.0 = slow, 10.0 = fast.",
+        "FieldName": "S_StatGain",
+        "InputType": "text",
+        "DefaultValue": "33.3",
+        "Placeholder": "10.0 - 50.0"
+    },
+    {
+        "DisplayName": "Stat Gain Delay",
+        "Category": "Player Options",
+        "Description": "Minutes between stat gains (decimal, 5.0 - 60.0).",
+        "FieldName": "S_StatGainDelay",
+        "InputType": "text",
+        "Suffix": "min",
+        "DefaultValue": "7.5",
+        "Placeholder": "5.0 - 60.0"
+    },
+    {
+        "DisplayName": "Allow Alien Origin",
+        "Category": "Player Options",
+        "Description": "If enabled, new characters can choose the alien origin route: grandmaster 40 skills but start with no gold/skills and suffer penalties.",
+        "FieldName": "S_AllowAlienChoice",
+        "InputType": "checkbox",
+        "EnumValues": { "False": "false", "True": "true" },
+        "DefaultValue": "false"
+    },
+    {
+        "DisplayName": "Monster Characters",
+        "Category": "Player Options",
+        "Description": "0 = disabled. 1 = human-sized creatures. 2 = includes larger creatures. 3 = includes giants/balrons.",
+        "FieldName": "S_MonsterCharacters",
+        "InputType": "enum",
+        "EnumValues": {
+            "0": "Disabled",
+            "1": "Human-sized Only",
+            "2": "Including Large Creatures",
+            "3": "All Sizes (Giants, Balrons)"
+        },
+        "DefaultValue": "1"
+    },
+    {
+        "DisplayName": "Safe Belly (No Hunger Indoors)",
+        "Category": "Player Options",
+        "Description": "If enabled, characters don't get hungry/thirsty inside banks, inns, or houses.",
+        "FieldName": "S_Belly",
+        "InputType": "checkbox",
+        "EnumValues": { "False": "false", "True": "true" },
+        "DefaultValue": "true"
+    },
+    {
+        "DisplayName": "Food Check Interval",
+        "Category": "Player Options",
+        "Description": "Minutes between hunger and thirst checks (5-60).",
+        "FieldName": "S_FoodCheck",
+        "InputType": "number",
+        "Suffix": "min",
+        "DefaultValue": "5",
+        "minValue": "5",
+        "maxValue": "60"
+    },
+    {
+        "DisplayName": "Guild Join Fee",
+        "Category": "Player Options",
+        "Description": "Base gold cost to join a guild (minimum 200). Increases with each guild joined if Guild Fee Increase is enabled.",
+        "FieldName": "S_GuildJoinFee",
+        "InputType": "number",
+        "DefaultValue": "2000",
+        "minValue": "200",
+        "maxValue": "1000000"
+    },
+    {
+        "DisplayName": "Guild Fee Increase",
+        "Category": "Player Options",
+        "Description": "If enabled, guild join fee increases based on number of prior guild memberships.",
+        "FieldName": "S_GuildIncrease",
+        "InputType": "checkbox",
+        "EnumValues": { "False": "false", "True": "true" },
+        "DefaultValue": "true"
+    },
+    {
+        "DisplayName": "Max Resistance",
+        "Category": "Player Options",
+        "Description": "Maximum value for player resistances (physical, cold, fire, poison, energy). Range: 40-90.",
+        "FieldName": "S_MaxResistance",
+        "InputType": "number",
+        "DefaultValue": "70",
+        "minValue": "40",
+        "maxValue": "90"
+    },
+    {
+        "DisplayName": "Death Pay Level",
+        "Category": "Player Options",
+        "Description": "Character level at which resurrection tribute fees begin (1-100).",
+        "FieldName": "S_DeathPayLevel",
+        "InputType": "number",
+        "DefaultValue": "5",
+        "minValue": "1",
+        "maxValue": "100"
+    },
+    {
+        "DisplayName": "Death Pay Amount",
+        "Category": "Player Options",
+        "Description": "Gold per character level for resurrection cost (minimum 1).",
+        "FieldName": "S_DeathPayAmount",
+        "InputType": "number",
+        "DefaultValue": "20",
+        "minValue": "1",
+        "maxValue": "10000"
+    },
+    {
+        "DisplayName": "Spell Damage vs Monsters",
+        "Category": "Player Options",
+        "Description": "Percentage of spell damage dealt to monsters (25-200).",
+        "FieldName": "S_SpellDamageIncreaseVsMonsters",
+        "InputType": "number",
+        "Suffix": "%",
+        "DefaultValue": "150",
+        "minValue": "25",
+        "maxValue": "200"
+    },
+    {
+        "DisplayName": "Spell Damage vs Players",
+        "Category": "Player Options",
+        "Description": "Percentage of spell damage dealt to player characters (25-200).",
+        "FieldName": "S_SpellDamageIncreaseVsPlayers",
+        "InputType": "number",
+        "Suffix": "%",
+        "DefaultValue": "100",
+        "minValue": "25",
+        "maxValue": "200"
+    },
+    {
+        "DisplayName": "Lower Reagent Max",
+        "Category": "Player Options",
+        "Description": "Maximum lower reagent percentage from equipment (0-100). 0 disables the attribute.",
+        "FieldName": "S_LowerReg",
+        "InputType": "number",
+        "Suffix": "%",
+        "DefaultValue": "100",
+        "minValue": "0",
+        "maxValue": "100"
+    },
+    {
+        "DisplayName": "Lower Reagent Enchantment",
+        "Category": "Player Options",
+        "Description": "Lower reagent percentage per enchantment level.",
+        "FieldName": "S_LowerRegEnchantment",
+        "InputType": "number",
+        "DefaultValue": "20",
+        "minValue": "0",
+        "maxValue": "100"
+    },
+    {
+        "DisplayName": "Lower Mana Max",
+        "Category": "Player Options",
+        "Description": "Maximum lower mana percentage from equipment (0-100). 0 disables the attribute.",
+        "FieldName": "S_LowerMana",
+        "InputType": "number",
+        "Suffix": "%",
+        "DefaultValue": "40",
+        "minValue": "0",
+        "maxValue": "100"
+    },
+    {
+        "DisplayName": "Lower Mana Enchantment",
+        "Category": "Player Options",
+        "Description": "Lower mana percentage per enchantment level.",
+        "FieldName": "S_LowerManaEnchantment",
+        "InputType": "number",
+        "DefaultValue": "8",
+        "minValue": "0",
+        "maxValue": "100"
+    },
+    {
+        "DisplayName": "Player Level Modifier",
+        "Category": "Player Options",
+        "Description": "Multiplier for HP/Mana/Stamina based on attributes (decimal, 0.5 - 3.0). A strength of 100 with 2.0 gives 200 HP.",
+        "FieldName": "S_PlayerLevelMod",
+        "InputType": "text",
+        "DefaultValue": "2.0",
+        "Placeholder": "0.5 - 3.0"
+    },
+    {
+        "DisplayName": "Allow Custom Titles",
+        "Category": "Player Options",
+        "Description": "If enabled, characters can set a custom title in the HELP section.",
+        "FieldName": "S_AllowCustomTitles",
+        "InputType": "checkbox",
+        "EnumValues": { "False": "false", "True": "true" },
+        "DefaultValue": "true"
+    },
+    {
+        "DisplayName": "Starting Gold (Minimum)",
+        "Category": "Player Options",
+        "Description": "Minimum gold a new character starts with (max 10000).",
+        "FieldName": "S_MinGold",
+        "InputType": "number",
+        "DefaultValue": "500",
+        "minValue": "0",
+        "maxValue": "10000"
+    },
+    {
+        "DisplayName": "Starting Gold (Maximum)",
+        "Category": "Player Options",
+        "Description": "Maximum gold a new character starts with (max 10000).",
+        "FieldName": "S_MaxGold",
+        "InputType": "number",
+        "DefaultValue": "600",
+        "minValue": "0",
+        "maxValue": "10000"
+    },
+    {
+        "DisplayName": "Require Previous Powerscroll",
+        "Category": "Player Options",
+        "Description": "If enabled, powerscrolls must be consumed in order: 105 -> 110 -> 115 -> 120 -> 125.",
+        "FieldName": "S_RequirePreviousPowerscroll",
+        "InputType": "checkbox",
+        "EnumValues": { "False": "false", "True": "true" },
+        "DefaultValue": "true"
+    },
+
+    {
+        "DisplayName": "Unidentified Item Chance",
+        "Category": "Quests & Treasure",
+        "Description": "Percent chance an item will be unidentified (minimum 10).",
+        "FieldName": "S_GetUnidentifiedChance",
+        "InputType": "number",
+        "Suffix": "%",
+        "DefaultValue": "50",
+        "minValue": "10",
+        "maxValue": "100"
+    },
+    {
+        "DisplayName": "Identify Items Only in Pack",
+        "Category": "Quests & Treasure",
+        "Description": "If enabled, items requiring identification can only be identified from within backpack.",
+        "FieldName": "S_IdentifyItemsOnlyInPack",
+        "InputType": "checkbox",
+        "EnumValues": { "False": "false", "True": "true" },
+        "DefaultValue": "false"
+    },
+    {
+        "DisplayName": "Unidentified Guaranteed Item Checks",
+        "Category": "Quests & Treasure",
+        "Description": "Comma-separated skill levels for guaranteed ID saving throws. Each entry guarantees an item at that skill level. Default: 0,30,60",
+        "FieldName": "S_UnidentifiedItem_GuaranteedItemChecks",
+        "InputType": "text",
+        "DefaultValue": "0,30,60",
+        "Placeholder": "0,30,60"
+    },
+    {
+        "DisplayName": "Loot Chance",
+        "Category": "Quests & Treasure",
+        "Description": "Determines how often treasure appears on corpses and chests (0-100). Higher = more loot.",
+        "FieldName": "S_LootChance",
+        "InputType": "number",
+        "Suffix": "%",
+        "DefaultValue": "100",
+        "minValue": "0",
+        "maxValue": "100"
+    },
+    {
+        "DisplayName": "Time Between Quests",
+        "Category": "Quests & Treasure",
+        "Description": "Minutes before a player can take a new bulletin board quest.",
+        "FieldName": "S_GetTimeBetweenQuests",
+        "InputType": "number",
+        "Suffix": "min",
+        "DefaultValue": "60",
+        "minValue": "0",
+        "maxValue": "100000"
+    },
+    {
+        "DisplayName": "Time Between Artifact Quests",
+        "Category": "Quests & Treasure",
+        "Description": "Minutes before a player can take a new sage artifact quest. Default 20160 = 14 days.",
+        "FieldName": "S_GetTimeBetweenArtifactQuests",
+        "InputType": "number",
+        "Suffix": "min",
+        "DefaultValue": "20160",
+        "minValue": "0",
+        "maxValue": "100000"
+    },
+    {
+        "DisplayName": "Gold Cut Rate",
+        "Category": "Quests & Treasure",
+        "Description": "Percent of gold from creatures, treasure, cargo, museum searches, shoppes, and some quests (5-100).",
+        "FieldName": "S_GetGoldCutRate",
+        "InputType": "number",
+        "Suffix": "%",
+        "DefaultValue": "35",
+        "minValue": "5",
+        "maxValue": "100"
+    },
+    {
+        "DisplayName": "Quest Reward Modifier",
+        "Category": "Quests & Treasure",
+        "Description": "Percentage modifier for bulletin board and thief note quest gold rewards (0-250).",
+        "FieldName": "S_QuestRewardModifier",
+        "InputType": "number",
+        "Suffix": "%",
+        "DefaultValue": "150",
+        "minValue": "0",
+        "maxValue": "250"
+    },
+    {
+        "DisplayName": "Repeatable Deco Artifact Steal",
+        "Category": "Quests & Treasure",
+        "Description": "If enabled, characters can steal decoration artifacts multiple times. Otherwise only once each.",
+        "FieldName": "S_DecoArtySteal",
+        "InputType": "checkbox",
+        "EnumValues": { "False": "false", "True": "true" },
+        "DefaultValue": "true"
+    },
+    {
+        "DisplayName": "Pedestal Steal Throttle",
+        "Category": "Quests & Treasure",
+        "Description": "If enabled, characters get lucrative pedestal bag/box items only once every couple of days.",
+        "FieldName": "S_PedStealThrottle",
+        "InputType": "checkbox",
+        "EnumValues": { "False": "false", "True": "true" },
+        "DefaultValue": "false"
+    },
+    {
+        "DisplayName": "Warn Skara Brae",
+        "Category": "Quests & Treasure",
+        "Description": "If enabled, characters receive a warning before entering quest-locked Skara Brae.",
+        "FieldName": "S_WarnSkaraBrae",
+        "InputType": "checkbox",
+        "EnumValues": { "False": "false", "True": "true" },
+        "DefaultValue": "true"
+    },
+    {
+        "DisplayName": "Warn Bottle City",
+        "Category": "Quests & Treasure",
+        "Description": "If enabled, characters receive a warning before entering quest-locked Bottle City.",
+        "FieldName": "S_WarnBottleCity",
+        "InputType": "checkbox",
+        "EnumValues": { "False": "false", "True": "true" },
+        "DefaultValue": "true"
+    },
+
+    {
+        "DisplayName": "Skill Boost",
+        "Category": "Skills",
+        "Description": "Extra GM skill points (0-10). Each point adds 100 skill points. 0 = normal.",
+        "FieldName": "S_SkillBoost",
+        "InputType": "number",
+        "DefaultValue": "0",
+        "minValue": "0",
+        "maxValue": "10"
+    },
+    {
+        "DisplayName": "Special Weapon Ability Skill",
+        "Category": "Skills",
+        "Description": "Minimum weapon/tactics skill for special abilities (decimal, minimum 20.0). Each ability requires 10 points above previous.",
+        "FieldName": "S_SpecialWeaponAbilSkill",
+        "InputType": "text",
+        "DefaultValue": "70.0",
+        "Placeholder": "20.0 minimum"
+    },
+    {
+        "DisplayName": "Skill Gain Rate",
+        "Category": "Skills",
+        "Description": "Faster skill gain (0-10). 0 = normal, 10 = fastest.",
+        "FieldName": "S_SkillGain",
+        "InputType": "number",
+        "DefaultValue": "0",
+        "minValue": "0",
+        "maxValue": "10"
+    },
+    {
+        "DisplayName": "Training Dummy Cap",
+        "Category": "Skills",
+        "Description": "Maximum skill from training dummies, training daemons, and archery buttes (decimal).",
+        "FieldName": "S_TrainDummies",
+        "InputType": "text",
+        "DefaultValue": "25.0"
+    },
+    {
+        "DisplayName": "Pickpocket Dip Cap",
+        "Category": "Skills",
+        "Description": "Maximum Stealing skill from pickpocket dips (decimal).",
+        "FieldName": "S_PickDips",
+        "InputType": "text",
+        "DefaultValue": "30.0"
+    },
+    {
+        "DisplayName": "Training Multiplier",
+        "Category": "Skills",
+        "Description": "Multiplies skill gain checks on training dummies, pickpocket dips, and archery buttes (1-100). Greater than 1 enables macroing.",
+        "FieldName": "S_TrainMulti",
+        "InputType": "number",
+        "DefaultValue": "1",
+        "minValue": "1",
+        "maxValue": "100"
+    },
+
+    {
+        "DisplayName": "Craft Many",
+        "Category": "Crafting",
+        "Description": "If enabled, craft 1, 10, or 100 items at a time. Also enables macroing and disables all-resource crafting (arrows, shafts, kindling).",
+        "FieldName": "S_CraftMany",
+        "InputType": "checkbox",
+        "EnumValues": { "False": "false", "True": "true" },
+        "DefaultValue": "true"
+    },
+    {
+        "DisplayName": "Craft Buttons",
+        "Category": "Crafting",
+        "Description": "If enabled (requires Craft Many), shows 1/10/100 buttons next to each crafting line item.",
+        "FieldName": "S_CraftButtons",
+        "InputType": "checkbox",
+        "EnumValues": { "False": "false", "True": "true" },
+        "DefaultValue": "false"
+    },
+    {
+        "DisplayName": "Resource Multiplier",
+        "Category": "Crafting",
+        "Description": "Multiplier for gathered resources - ore, logs, hides, etc. (1-100). Greater than 1 enables macroing.",
+        "FieldName": "S_Resources",
+        "InputType": "number",
+        "DefaultValue": "1",
+        "minValue": "1",
+        "maxValue": "100"
+    },
+    {
+        "DisplayName": "Guild Enhance Price Modifier",
+        "Category": "Crafting",
+        "Description": "Percentage increase to the base price of enhancing items with extraordinary guild tools.",
+        "FieldName": "S_GuildEnhanceMod",
+        "InputType": "number",
+        "Suffix": "%",
+        "DefaultValue": "100",
+        "minValue": "0",
+        "maxValue": "10000"
+    },
+    {
+        "DisplayName": "Allow Macro Resources",
+        "Category": "Crafting",
+        "Description": "If disabled, players get occasional CAPTCHA to prevent unattended resource gathering.",
+        "FieldName": "S_AllowMacroResources",
+        "InputType": "checkbox",
+        "EnumValues": { "False": "false", "True": "true" },
+        "DefaultValue": "true"
+    },
+    {
+        "DisplayName": "Recipes Require Min Skill",
+        "Category": "Crafting",
+        "Description": "If enabled, players cannot learn a recipe unless their skill is high enough to craft the item.",
+        "FieldName": "S_RecipesRequireMinSkill",
+        "InputType": "checkbox",
+        "EnumValues": { "False": "false", "True": "true" },
+        "DefaultValue": "false"
+    },
+    {
+        "DisplayName": "Recipes For Anyone",
+        "Category": "Crafting",
+        "Description": "If enabled, any player can use any recipe. If disabled, only the acquiring player/account can use them.",
+        "FieldName": "S_RecipesForAnyone",
+        "InputType": "checkbox",
+        "EnumValues": { "False": "false", "True": "true" },
+        "DefaultValue": "false"
+    },
+    {
+        "DisplayName": "Auto Repeat Harvesting",
+        "Category": "Crafting",
+        "Description": "If enabled, targeting a node to harvest will repeat automatically.",
+        "FieldName": "S_AutoRepeatHarvesting",
+        "InputType": "checkbox",
+        "EnumValues": { "False": "false", "True": "true" },
+        "DefaultValue": "true"
+    },
+    {
+        "DisplayName": "Legacy Inscription",
+        "Category": "Crafting",
+        "Description": "If enabled, uses the legacy inscription crafting system.",
+        "FieldName": "S_UseLegacyInscription",
+        "InputType": "checkbox",
+        "EnumValues": { "False": "false", "True": "true" },
+        "DefaultValue": "false"
+    },
+
+    {
+        "DisplayName": "Creatures Detect Hidden",
+        "Category": "Monsters & Creatures",
+        "Description": "If enabled, all creatures can detect hidden characters based on their difficulty level.",
+        "FieldName": "S_CreaturesSearching",
+        "InputType": "checkbox",
+        "EnumValues": { "False": "false", "True": "true" },
+        "DefaultValue": "true"
+    },
+    {
+        "DisplayName": "Wyrm Body",
+        "Category": "Monsters & Creatures",
+        "Description": "Body value for standard Wyrms. 723 = newer large model, 12 = classic wyrm, 59 = dragon body.",
+        "FieldName": "S_WyrmBody",
+        "InputType": "enum",
+        "EnumValues": {
+            "723": "Large Modern Wyrm (723)",
+            "12": "Classic Wyrm (12)",
+            "59": "Dragon Body (59)"
+        },
+        "DefaultValue": "723"
+    },
+    {
+        "DisplayName": "Dispel Failure Chance",
+        "Category": "Monsters & Creatures",
+        "Description": "Percent chance an enemy will fail to dispel a summoned creature (0 = disabled, 10-90 valid).",
+        "FieldName": "S_DispelFailure",
+        "InputType": "number",
+        "Suffix": "%",
+        "DefaultValue": "0",
+        "minValue": "0",
+        "maxValue": "90"
+    },
+    {
+        "DisplayName": "HP Modifier",
+        "Category": "Monsters & Creatures",
+        "Description": "Percentage increase to all creature hit points. 0 = normal, 100 = double HP.",
+        "FieldName": "S_HPModifier",
+        "InputType": "number",
+        "Suffix": "%",
+        "DefaultValue": "0",
+        "minValue": "0",
+        "maxValue": "1000"
+    },
+    {
+        "DisplayName": "Difficulty: Normal",
+        "Category": "Monsters & Creatures",
+        "Description": "Percentage difficulty increase for normal dungeons. Affects attributes, skills, fame, karma, gold, and taming requirements.",
+        "FieldName": "S_Normal",
+        "InputType": "number",
+        "Suffix": "%",
+        "DefaultValue": "0",
+        "minValue": "0",
+        "maxValue": "500"
+    },
+    {
+        "DisplayName": "Difficulty: Difficult",
+        "Category": "Monsters & Creatures",
+        "Description": "Percentage difficulty increase for difficult dungeons.",
+        "FieldName": "S_Difficult",
+        "InputType": "number",
+        "Suffix": "%",
+        "DefaultValue": "30",
+        "minValue": "0",
+        "maxValue": "500"
+    },
+    {
+        "DisplayName": "Difficulty: Challenging",
+        "Category": "Monsters & Creatures",
+        "Description": "Percentage difficulty increase for challenging dungeons.",
+        "FieldName": "S_Challenging",
+        "InputType": "number",
+        "Suffix": "%",
+        "DefaultValue": "60",
+        "minValue": "0",
+        "maxValue": "500"
+    },
+    {
+        "DisplayName": "Difficulty: Hard",
+        "Category": "Monsters & Creatures",
+        "Description": "Percentage difficulty increase for hard dungeons.",
+        "FieldName": "S_Hard",
+        "InputType": "number",
+        "Suffix": "%",
+        "DefaultValue": "90",
+        "minValue": "0",
+        "maxValue": "500"
+    },
+    {
+        "DisplayName": "Difficulty: Deadly",
+        "Category": "Monsters & Creatures",
+        "Description": "Percentage difficulty increase for deadly dungeons.",
+        "FieldName": "S_Deadly",
+        "InputType": "number",
+        "Suffix": "%",
+        "DefaultValue": "120",
+        "minValue": "0",
+        "maxValue": "500"
+    },
+    {
+        "DisplayName": "Scary Spawns",
+        "Category": "Monsters & Creatures",
+        "Description": "If enabled, random powerful creatures (daemons, balrons, dragons, wyrms, angels, etc.) spawn and roam the land.",
+        "FieldName": "S_Scary",
+        "InputType": "checkbox",
+        "EnumValues": { "False": "false", "True": "true" },
+        "DefaultValue": "true"
+    },
+    {
+        "DisplayName": "Safari: Sosaria",
+        "Category": "Monsters & Creatures",
+        "Description": "Chance (0-100) of safari animals (elephants, giraffes, etc.) spawning in Sosaria.",
+        "FieldName": "S_Safari_Sosaria",
+        "InputType": "number",
+        "Suffix": "%",
+        "DefaultValue": "0",
+        "minValue": "0",
+        "maxValue": "100"
+    },
+    {
+        "DisplayName": "Safari: Lodoria",
+        "Category": "Monsters & Creatures",
+        "Description": "Chance (0-100) of safari animals spawning in Lodoria.",
+        "FieldName": "S_Safari_Lodoria",
+        "InputType": "number",
+        "Suffix": "%",
+        "DefaultValue": "0",
+        "minValue": "0",
+        "maxValue": "100"
+    },
+    {
+        "DisplayName": "Safari: Serpent Island",
+        "Category": "Monsters & Creatures",
+        "Description": "Chance (0-100) of safari animals spawning on Serpent Island.",
+        "FieldName": "S_Safari_Serpent",
+        "InputType": "number",
+        "Suffix": "%",
+        "DefaultValue": "50",
+        "minValue": "0",
+        "maxValue": "100"
+    },
+    {
+        "DisplayName": "Safari: Kuldar",
+        "Category": "Monsters & Creatures",
+        "Description": "Chance (0-100) of safari animals spawning in Kuldar.",
+        "FieldName": "S_Safari_Kuldar",
+        "InputType": "number",
+        "Suffix": "%",
+        "DefaultValue": "0",
+        "minValue": "0",
+        "maxValue": "100"
+    },
+    {
+        "DisplayName": "Safari: Savaged Empire",
+        "Category": "Monsters & Creatures",
+        "Description": "Chance (0-100) of safari animals spawning in the Savaged Empire.",
+        "FieldName": "S_Safari_Savaged",
+        "InputType": "number",
+        "Suffix": "%",
+        "DefaultValue": "50",
+        "minValue": "0",
+        "maxValue": "100"
+    },
+    {
+        "DisplayName": "Line of Sight",
+        "Category": "Monsters & Creatures",
+        "Description": "If enabled, creatures in dungeons are hidden behind walls/doors unless searching for blood. Run [buildworld after changing.",
+        "FieldName": "S_LineOfSight",
+        "InputType": "checkbox",
+        "EnumValues": { "False": "false", "True": "true" },
+        "DefaultValue": "true"
+    },
+    {
+        "DisplayName": "Purple Adventurers Attack Monsters",
+        "Category": "Monsters & Creatures",
+        "Description": "If enabled, purple named adventurers will attack nearby monsters (not just criminals/murderers/low karma characters).",
+        "FieldName": "S_Purple",
+        "InputType": "checkbox",
+        "EnumValues": { "False": "false", "True": "true" },
+        "DefaultValue": "true"
+    },
+    {
+        "DisplayName": "Spawn Time Minimum",
+        "Category": "Monsters & Creatures",
+        "Description": "Minimum minutes for creature respawn.",
+        "FieldName": "S_SpawnMin",
+        "InputType": "number",
+        "Suffix": "min",
+        "DefaultValue": "45",
+        "minValue": "1",
+        "maxValue": "1440"
+    },
+    {
+        "DisplayName": "Spawn Time Maximum",
+        "Category": "Monsters & Creatures",
+        "Description": "Maximum minutes for creature respawn.",
+        "FieldName": "S_SpawnMax",
+        "InputType": "number",
+        "Suffix": "min",
+        "DefaultValue": "60",
+        "minValue": "1",
+        "maxValue": "1440"
+    },
+    {
+        "DisplayName": "Paralyze Duration",
+        "Category": "Monsters & Creatures",
+        "Description": "Maximum seconds a monster can paralyze a character (decimal). Affects mummies, ants, plants, spiders. Above 10 can allow chain-paralyze.",
+        "FieldName": "S_paralyzeDuration",
+        "InputType": "text",
+        "Suffix": "sec",
+        "DefaultValue": "10.0"
+    },
+
+    {
+        "DisplayName": "Vendors Sell All",
+        "Category": "Merchants",
+        "Description": "If enabled, vendors sell everything they normally stock (some rarity % still applies).",
+        "FieldName": "S_SellAll",
+        "InputType": "checkbox",
+        "EnumValues": { "False": "false", "True": "true" },
+        "DefaultValue": "false"
+    },
+    {
+        "DisplayName": "Vendors Buy All",
+        "Category": "Merchants",
+        "Description": "If enabled, vendors buy everything they normally stock (some rarity % still applies).",
+        "FieldName": "S_BuyAll",
+        "InputType": "checkbox",
+        "EnumValues": { "False": "false", "True": "true" },
+        "DefaultValue": "true"
+    },
+    {
+        "DisplayName": "Vendors Buy Cloth",
+        "Category": "Merchants",
+        "Description": "If enabled, vendors buy tailor materials (cotton, flax, wool, cloth, string).",
+        "FieldName": "S_BuyCloth",
+        "InputType": "checkbox",
+        "EnumValues": { "False": "false", "True": "true" },
+        "DefaultValue": "false"
+    },
+    {
+        "DisplayName": "Vendors Buy Stuff",
+        "Category": "Merchants",
+        "Description": "If disabled, vendors will not buy from players and merchant crates act as normal containers.",
+        "FieldName": "S_VendorsBuyStuff",
+        "InputType": "checkbox",
+        "EnumValues": { "False": "false", "True": "true" },
+        "DefaultValue": "true"
+    },
+    {
+        "DisplayName": "Rich Merchants",
+        "Category": "Merchants",
+        "Description": "If enabled, merchants have unlimited gold for buying. Otherwise limited by min/max merchant gold.",
+        "FieldName": "S_RichMerchants",
+        "InputType": "checkbox",
+        "EnumValues": { "False": "false", "True": "true" },
+        "DefaultValue": "false"
+    },
+    {
+        "DisplayName": "Use Remaining Gold",
+        "Category": "Merchants",
+        "Description": "If enabled, merchants will spend their remaining gold on items they cannot fully afford.",
+        "FieldName": "S_UseRemainingGold",
+        "InputType": "checkbox",
+        "EnumValues": { "False": "false", "True": "true" },
+        "DefaultValue": "false"
+    },
+    {
+        "DisplayName": "Min Merchant Gold",
+        "Category": "Merchants",
+        "Description": "Minimum gold merchants have for commerce (only if not Rich Merchants).",
+        "FieldName": "S_MinMerchant",
+        "InputType": "number",
+        "DefaultValue": "1000",
+        "minValue": "0",
+        "maxValue": "1000000"
+    },
+    {
+        "DisplayName": "Max Merchant Gold",
+        "Category": "Merchants",
+        "Description": "Maximum gold merchants have for commerce (only if not Rich Merchants). Resets each restocking period.",
+        "FieldName": "S_MaxMerchant",
+        "InputType": "number",
+        "DefaultValue": "2000",
+        "minValue": "0",
+        "maxValue": "1000000"
+    },
+    {
+        "DisplayName": "Scale Merchant Coins by Facet",
+        "Category": "Merchants",
+        "Description": "If enabled, merchant gold scales by facet to encourage selling in non-default facets. WARNING: Exceeds Max Merchant Gold.",
+        "FieldName": "S_ScaleMerchantCoins",
+        "InputType": "checkbox",
+        "EnumValues": { "False": "false", "True": "true" },
+        "DefaultValue": "true"
+    },
+    {
+        "DisplayName": "Sell Gold Cut Rate",
+        "Category": "Merchants",
+        "Description": "Percentage decrease to prices when players sell to vendors. 0 disables.",
+        "FieldName": "S_SellGoldCutRate",
+        "InputType": "number",
+        "Suffix": "%",
+        "DefaultValue": "25",
+        "minValue": "0",
+        "maxValue": "100"
+    },
+    {
+        "DisplayName": "Quality Prices",
+        "Category": "Merchants",
+        "Description": "If enabled, prices fluctuate based on item quality, stats, and material.",
+        "FieldName": "S_QualityPrices",
+        "InputType": "checkbox",
+        "EnumValues": { "False": "false", "True": "true" },
+        "DefaultValue": "true"
+    },
+    {
+        "DisplayName": "Merchant Crates",
+        "Category": "Merchants",
+        "Description": "If enabled, players can buy merchant crates to sell crafted items from their homes.",
+        "FieldName": "S_MerchantCrates",
+        "InputType": "checkbox",
+        "EnumValues": { "False": "false", "True": "true" },
+        "DefaultValue": "true"
+    },
+    {
+        "DisplayName": "Price Increase",
+        "Category": "Merchants",
+        "Description": "Percentage increase to vendor item prices. 0 = normal prices.",
+        "FieldName": "S_PriceMore",
+        "InputType": "number",
+        "Suffix": "%",
+        "DefaultValue": "0",
+        "minValue": "0",
+        "maxValue": "1000"
+    },
+    {
+        "DisplayName": "Resource Price Increase",
+        "Category": "Merchants",
+        "Description": "Percentage increase to sold resource prices (ingots, wood, etc.). WARNING: Stacks with Price Increase.",
+        "FieldName": "S_ResourcePrice",
+        "InputType": "number",
+        "Suffix": "%",
+        "DefaultValue": "500",
+        "minValue": "0",
+        "maxValue": "10000"
+    },
+    {
+        "DisplayName": "Sold Resources",
+        "Category": "Merchants",
+        "Description": "If enabled, some merchants sell large volumes of resources (ingots, boards, leather, etc.) based on rarity and location.",
+        "FieldName": "S_SoldResource",
+        "InputType": "checkbox",
+        "EnumValues": { "False": "false", "True": "true" },
+        "DefaultValue": "false"
+    },
+    {
+        "DisplayName": "No Buy Resources",
+        "Category": "Merchants",
+        "Description": "If enabled, vendors will not buy resources you try to sell (bandages, ingots, cloth, boards, etc.).",
+        "FieldName": "S_NoBuyResources",
+        "InputType": "checkbox",
+        "EnumValues": { "False": "false", "True": "true" },
+        "DefaultValue": "false"
+    },
+    {
+        "DisplayName": "Black Market",
+        "Category": "Merchants",
+        "Description": "If enabled, some vendors have a black market with special crafted items, land-specific resources.",
+        "FieldName": "S_BlackMarket",
+        "InputType": "checkbox",
+        "EnumValues": { "False": "false", "True": "true" },
+        "DefaultValue": "false"
+    },
+    {
+        "DisplayName": "Custom Merchant",
+        "Category": "Merchants",
+        "Description": "If enabled, custom merchants appear in settlements after [buildworld. Configure items in Info/Scripts/Merchant.cs. Max 250 items.",
+        "FieldName": "S_CustomMerchant",
+        "InputType": "checkbox",
+        "EnumValues": { "False": "false", "True": "true" },
+        "DefaultValue": "false"
+    },
+
+    {
+        "DisplayName": "Co-Owners as Owners",
+        "Category": "Homes & Ships",
+        "Description": "If enabled, house co-owners have the same permissions as owners.",
+        "FieldName": "S_HouseOwners",
+        "InputType": "checkbox",
+        "EnumValues": { "False": "false", "True": "true" },
+        "DefaultValue": "false"
+    },
+    {
+        "DisplayName": "Lawns Allowed",
+        "Category": "Homes & Ships",
+        "Description": "If enabled, characters can use lawn tools to add outdoor items (trees, fences, etc.). Disabling refunds gold and removes tools.",
+        "FieldName": "S_LawnsAllowed",
+        "InputType": "checkbox",
+        "EnumValues": { "False": "false", "True": "true" },
+        "DefaultValue": "true"
+    },
+    {
+        "DisplayName": "Remodeling Allowed",
+        "Category": "Homes & Ships",
+        "Description": "If enabled, characters can use remodeling tools to add walls, doors, tiles. Disabling refunds gold and removes tools.",
+        "FieldName": "S_ShantysAllowed",
+        "InputType": "checkbox",
+        "EnumValues": { "False": "false", "True": "true" },
+        "DefaultValue": "true"
+    },
+    {
+        "DisplayName": "Boat Decay",
+        "Category": "Homes & Ships",
+        "Description": "Days before an unused boat or magic carpet decays (decimal, minimum 5.0).",
+        "FieldName": "S_BoatDecay",
+        "InputType": "text",
+        "Suffix": "days",
+        "DefaultValue": "365.0",
+        "Placeholder": "5.0 minimum"
+    },
+    {
+        "DisplayName": "Home Decay",
+        "Category": "Homes & Ships",
+        "Description": "Days before an unvisited home decays (decimal, minimum 30.0). Only applies if Houses Decay is enabled.",
+        "FieldName": "S_HomeDecay",
+        "InputType": "text",
+        "Suffix": "days",
+        "DefaultValue": "365.0",
+        "Placeholder": "30.0 minimum"
+    },
+    {
+        "DisplayName": "Houses Decay",
+        "Category": "Homes & Ships",
+        "Description": "If disabled, houses never decay and Home Decay setting is ignored.",
+        "FieldName": "S_HousesDecay",
+        "InputType": "checkbox",
+        "EnumValues": { "False": "false", "True": "true" },
+        "DefaultValue": "false"
+    },
+    {
+        "DisplayName": "Houses Per Account",
+        "Category": "Homes & Ships",
+        "Description": "Maximum houses an account can own. -1 for unlimited.",
+        "FieldName": "S_HousesPerAccount",
+        "InputType": "number",
+        "DefaultValue": "2",
+        "minValue": "-1",
+        "maxValue": "100"
+    },
+    {
+        "DisplayName": "Allow House Dyes",
+        "Category": "Homes & Ships",
+        "Description": "If enabled, players can dye construction contracts so their pre-designed home is entirely in one color.",
+        "FieldName": "S_AllowHouseDyes",
+        "InputType": "checkbox",
+        "EnumValues": { "False": "false", "True": "true" },
+        "DefaultValue": "false"
+    },
+    {
+        "DisplayName": "Allow Custom Homes",
+        "Category": "Homes & Ships",
+        "Description": "If enabled, players can use the custom house system. Otherwise only pre-built classic houses.",
+        "FieldName": "S_AllowCustomHomes",
+        "InputType": "checkbox",
+        "EnumValues": { "False": "false", "True": "true" },
+        "DefaultValue": "true"
+    },
+    {
+        "DisplayName": "Public Basements",
+        "Category": "Homes & Ships",
+        "Description": "If enabled, players can buy basement doors leading to a shared public basement area. Usually for multiplayer.",
+        "FieldName": "S_Basements",
+        "InputType": "checkbox",
+        "EnumValues": { "False": "false", "True": "true" },
+        "DefaultValue": "true"
+    },
+    {
+        "DisplayName": "Unlimited House Storage",
+        "Category": "Homes & Ships",
+        "Description": "If enabled, items in homes never decay regardless of lockdown status. Removes storage capacity limits from all houses.",
+        "FieldName": "S_HouseStorage",
+        "InputType": "checkbox",
+        "EnumValues": { "False": "false", "True": "true" },
+        "DefaultValue": "false"
+    },
+
+    {
+        "DisplayName": "Pet Stat Gain Delay",
+        "Category": "Pets, Mounts, & Followers",
+        "Description": "Minutes between stat gains for trainable pets (decimal, 1.0-60.0).",
+        "FieldName": "S_PetStatGainDelay",
+        "InputType": "text",
+        "Suffix": "min",
+        "DefaultValue": "5.0",
+        "Placeholder": "1.0 - 60.0"
+    },
+    {
+        "DisplayName": "Damage to Pets Multiplier",
+        "Category": "Pets, Mounts, & Followers",
+        "Description": "Multiplier for damage dealt to player-controlled NPCs (decimal). 1.0 = normal.",
+        "FieldName": "S_DamageToPets",
+        "InputType": "text",
+        "DefaultValue": "1.4"
+    },
+    {
+        "DisplayName": "Critical Hit Chance vs Pets",
+        "Category": "Pets, Mounts, & Followers",
+        "Description": "Percent chance enemies score a critical double-damage hit against player-controlled NPCs (0-100).",
+        "FieldName": "S_CriticalToPets",
+        "InputType": "number",
+        "Suffix": "%",
+        "DefaultValue": "5",
+        "minValue": "0",
+        "maxValue": "100"
+    },
+    {
+        "DisplayName": "Pets Match Master Notoriety",
+        "Category": "Pets, Mounts, & Followers",
+        "Description": "If enabled, pets match their master's notoriety. Otherwise they are blue or criminal as appropriate.",
+        "FieldName": "S_PetsMatchMasterNotoriety",
+        "InputType": "checkbox",
+        "EnumValues": { "False": "false", "True": "true" },
+        "DefaultValue": "true"
+    },
+    {
+        "DisplayName": "Pets Can Harm Owner",
+        "Category": "Pets, Mounts, & Followers",
+        "Description": "If enabled, pets can harm the player who owns them. Note: Pet abilities may still hurt owners.",
+        "FieldName": "S_PetsCanHarmOwner",
+        "InputType": "checkbox",
+        "EnumValues": { "False": "false", "True": "true" },
+        "DefaultValue": "false"
+    },
+    {
+        "DisplayName": "Pets Can Harm Sibling Pets",
+        "Category": "Pets, Mounts, & Followers",
+        "Description": "If enabled, pets can harm other pets belonging to the same player.",
+        "FieldName": "S_PetsCanHarmSiblingPets",
+        "InputType": "checkbox",
+        "EnumValues": { "False": "false", "True": "true" },
+        "DefaultValue": "true"
+    },
+    {
+        "DisplayName": "No Mounts in Certain Regions",
+        "Category": "Pets, Mounts, & Followers",
+        "Description": "If enabled, mounts are auto-stabled in dungeons/caves and remounted on exit. Increases difficulty.",
+        "FieldName": "S_NoMountsInCertainRegions",
+        "InputType": "checkbox",
+        "EnumValues": { "False": "false", "True": "true" },
+        "DefaultValue": "true"
+    },
+    {
+        "DisplayName": "No Mounts in Buildings",
+        "Category": "Pets, Mounts, & Followers",
+        "Description": "If enabled, characters dismount when entering buildings and remount on exit.",
+        "FieldName": "S_NoMountBuilding",
+        "InputType": "checkbox",
+        "EnumValues": { "False": "false", "True": "true" },
+        "DefaultValue": "true"
+    },
+    {
+        "DisplayName": "No Mounts in Houses",
+        "Category": "Pets, Mounts, & Followers",
+        "Description": "If enabled, characters dismount when entering player homes and remount on exit.",
+        "FieldName": "S_NoMountsInHouses",
+        "InputType": "checkbox",
+        "EnumValues": { "False": "false", "True": "true" },
+        "DefaultValue": "true"
+    },
+    {
+        "DisplayName": "Fast Friends",
+        "Category": "Pets, Mounts, & Followers",
+        "Description": "If enabled, followers attempt to keep up when you run fast.",
+        "FieldName": "S_FastFriends",
+        "InputType": "checkbox",
+        "EnumValues": { "False": "false", "True": "true" },
+        "DefaultValue": "true"
+    },
+    {
+        "DisplayName": "Friends Avoid Heels",
+        "Category": "Pets, Mounts, & Followers",
+        "Description": "If enabled, followers spread out instead of stacking on top of each other.",
+        "FieldName": "S_FriendsAvoidHeels",
+        "InputType": "checkbox",
+        "EnumValues": { "False": "false", "True": "true" },
+        "DefaultValue": "false"
+    },
+    {
+        "DisplayName": "Friends Guard Friends",
+        "Category": "Pets, Mounts, & Followers",
+        "Description": "If enabled, followers guard each other in addition to guarding you.",
+        "FieldName": "S_FriendsGuardFriends",
+        "InputType": "checkbox",
+        "EnumValues": { "False": "false", "True": "true" },
+        "DefaultValue": "true"
+    },
+    {
+        "DisplayName": "Extra Stable Slots",
+        "Category": "Pets, Mounts, & Followers",
+        "Description": "Extra stabled pet slots beyond the base of 2 (0-20). Additional slots come from druidism, taming, veterinary, and herding skills.",
+        "FieldName": "S_Stables",
+        "InputType": "number",
+        "DefaultValue": "5",
+        "minValue": "0",
+        "maxValue": "20"
+    },
+    {
+        "DisplayName": "Bond Days",
+        "Category": "Pets, Mounts, & Followers",
+        "Description": "Days after taming before a pet can be bonded (0-30).",
+        "FieldName": "S_BondDays",
+        "InputType": "number",
+        "Suffix": "days",
+        "DefaultValue": "7",
+        "minValue": "0",
+        "maxValue": "30"
+    },
+
+    {
+        "DisplayName": "Guards Kill Instantly",
+        "Category": "Towns & Cities",
+        "Description": "If enabled, guards instantly kill criminals/murderers. If disabled, they chase and send caught characters to prison.",
+        "FieldName": "S_GuardsSentenceDeath",
+        "InputType": "checkbox",
+        "EnumValues": { "False": "false", "True": "true" },
+        "DefaultValue": "false"
+    },
+    {
+        "DisplayName": "Guards Patrol Outside",
+        "Category": "Towns & Cities",
+        "Description": "If enabled, guards pay attention to enemies outside their town borders.",
+        "FieldName": "S_GuardsPatrolOutside",
+        "InputType": "checkbox",
+        "EnumValues": { "False": "false", "True": "true" },
+        "DefaultValue": "false"
+    },
+    {
+        "DisplayName": "Guards Sprint",
+        "Category": "Towns & Cities",
+        "Description": "If enabled, guards move faster to catch criminals (only works if Guards Kill Instantly is disabled).",
+        "FieldName": "S_GuardsSprint",
+        "InputType": "checkbox",
+        "EnumValues": { "False": "false", "True": "true" },
+        "DefaultValue": "true"
+    },
+    {
+        "DisplayName": "Jail Only Deletes Money",
+        "Category": "Towns & Cities",
+        "Description": "If enabled, jailed players only lose raw currency. If disabled, loses stackable items (potions, bandages, arrows, etc.).",
+        "FieldName": "S_JailOnlyDeletesMoney",
+        "InputType": "checkbox",
+        "EnumValues": { "False": "false", "True": "true" },
+        "DefaultValue": "true"
+    },
+    {
+        "DisplayName": "Town Humanoid Companions",
+        "Category": "Towns & Cities",
+        "Description": "If enabled, town adventurer groups may have a humanoid, pet, or summoned companion (~5% chance). Adds atmosphere.",
+        "FieldName": "S_Humanoids",
+        "InputType": "checkbox",
+        "EnumValues": { "False": "false", "True": "true" },
+        "DefaultValue": "true"
+    },
+
+    {
+        "DisplayName": "Settings Reviewed",
+        "Category": "Acknowledgement",
+        "Description": "Confirms you have reviewed all game settings and set them to your preference.",
+        "FieldName": "S_Reviewed",
+        "InputType": "checkbox",
+        "EnumValues": { "False": "false", "True": "true" },
+        "DefaultValue": "true"
+    }
+]
